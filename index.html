@@ -4,8 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crud App</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      table {
+        margin: 0px auto;
+      }
+
+      .update_form {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <h1>Crud App</h1>
+
+    <form class="create_form" id="form">
+      <input type="text" name="id" class="id" disabled /> <br />
+      <input type="text" name="name" class="name" placeholder="Name" required />
+      <input
+        type="email"
+        name="email"
+        class="email"
+        placeholder="Email"
+        required
+      />
+      <br /><br />
+      <button type="submit" id="create" onclick="post();">Create</button>
+      <button type="submit" id="create" onclick="readAll()">Read</button>
+      <button type="submit" id="create" onclick="updatebtn()">Update</button>
+      <button type="submit" id="create" onclick="deletebtn()">Delete</button>
+      <br /><br />
+    </form>
+
+    <form class="update_form" id="form2">
+      <input type="text" name="id" class="id" hidden />
+      <input type="text" class="uname" required />
+      <input type="email" class="uemail" pattern=" @gmail.com" required />
+      <button type="submit" onclick="update()">Update</button>
+    </form>
+
+    <h2>User Details</h2>
+
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </thead>
+      <tbody class="table_data"></tbody>
+    </table>
+
     <script src="script.js"></script>
   </body>
 </html>
