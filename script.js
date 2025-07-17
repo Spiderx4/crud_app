@@ -18,8 +18,8 @@ function readAll(){
         <td>${obj.name}</td>
         <td>${obj.email}</td>
         <td>
-          <button onclick={edit(${obj.id})}>Edit</button>
-          <button onclick={deleted(${obj.id})}>Delete</button>
+          <button class="btn btn-info mx-1" onclick={edit(${obj.id})}>Edit</button>
+          <button class="btn btn-danger mx-1" onclick={deleted(${obj.id})}>Delete</button>
         </td>
         </tr>`
     ));
