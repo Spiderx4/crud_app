@@ -97,6 +97,8 @@ function deleted(id){
     data = data.filter(d => d.id !== id);
 
     readAll();
+
+    alert("Record is deleted!");
 }
 
 //delete button
